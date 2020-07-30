@@ -27,7 +27,7 @@ jobs:
     - name: Build and push image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/userservice" -f  "userservice/Dockerfile" -t codeacademy2020register.azurecr.io/codeacademy2020cluster:${{ github.sha }}
+        docker build "$GITHUB_WORKSPACE/userservice" -f  "userservice/Dockerfile" -t codeacademy2020registerniilo.azurecr.io/codeacademy2020cluster:${{ github.sha }}
         docker push codeacademy2020registerniilo.azurecr.io/codeacademy2020cluster:${{ github.sha }}
     
     - uses: azure/k8s-set-context@v1
