@@ -4,6 +4,9 @@ metadata:
   name: "codeacademy2020cluster-46ea"
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+        app: "codeacademy2020cluster-46ea"
   template:
     metadata:
       labels:
